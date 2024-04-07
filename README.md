@@ -1,3 +1,6 @@
+Repository này copy của ông Thắng chung (**https://github.com/thangchung/clean-architecture-dotnet**)
+Mình chỉ clone mục đích là learning và upgrage theo .NET version thôi.
+
 # 🔆 clean-architecture-dotnet
 
 "Everything should be made as simple as possible, but not simpler." - Albert Einstein
