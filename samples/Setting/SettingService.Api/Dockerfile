@@ -6,7 +6,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY ["samples/Setting/SettingService.Api/SettingService.Api.csproj", "SettingService.Api/"]
-RUN dotnet restore "samples/Setting/SettingService.Api/SettingService.Api.csproj"
+RUN dotnet restore "SettingService.Api/SettingService.Api.csproj"
 COPY . .
 WORKDIR "/src/SettingService.Api"
 RUN dotnet build "SettingService.Api.csproj" -c Release -o /app/build
