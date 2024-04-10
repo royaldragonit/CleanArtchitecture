@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30803.129
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Product", "Product", "{26B30655-87DA-471F-8CE5-132B4281791F}"
 EndProject
@@ -59,11 +59,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerService.Infrastruct
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebBlazor", "WebBlazor", "{1BC686AA-19F9-438D-B065-2DF7F742ED66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "samples\IdentityServer\IdentityServer.csproj", "{F1EB3422-3868-4256-932F-0374E912E4ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "samples\IdentityServer\IdentityServer.csproj", "{F1EB3422-3868-4256-932F-0374E912E4ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor.Client", "samples\WebBlazor\Client\Blazor.Client.csproj", "{EE5692BC-78F8-45DB-B1D6-2459937B658A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.Client", "samples\WebBlazor\Client\Blazor.Client.csproj", "{EE5692BC-78F8-45DB-B1D6-2459937B658A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor.Server", "samples\WebBlazor\Server\Blazor.Server.csproj", "{450032D6-68BB-4BB4-A58D-87F4330B68B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.Server", "samples\WebBlazor\Server\Blazor.Server.csproj", "{450032D6-68BB-4BB4-A58D-87F4330B68B4}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A828B510-C888-46E5-B87A-A4972161961F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +149,10 @@ Global
 		{450032D6-68BB-4BB4-A58D-87F4330B68B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{450032D6-68BB-4BB4-A58D-87F4330B68B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{450032D6-68BB-4BB4-A58D-87F4330B68B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A828B510-C888-46E5-B87A-A4972161961F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A828B510-C888-46E5-B87A-A4972161961F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A828B510-C888-46E5-B87A-A4972161961F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A828B510-C888-46E5-B87A-A4972161961F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

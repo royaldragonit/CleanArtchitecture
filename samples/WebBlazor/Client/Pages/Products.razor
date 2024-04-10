@@ -1,4 +1,4 @@
-﻿@page "/products"
+@page "/products"
 @attribute [Authorize]
 @inject IAppApi _appApi
 
@@ -32,7 +32,7 @@
   </DataGridCommandColumn>
   <DataGridColumn TItem="ProductDto" Field="@nameof(ProductDto.Name)" Caption="Name" Sortable="true" Editable="true">
     <FilterTemplate>
-      <TextEdit Placeholder="Search name" Text="@context.SearchValue" TextChanged="@(v=> context.TriggerFilterChange(v))" />
+      <TextEdit Placeholder="Search name" Text="@context.SearchValue.ToString()" TextChanged="@(v=> context.TriggerFilterChange(v))" />
     </FilterTemplate>
   </DataGridColumn>
   <DataGridNumericColumn TItem="ProductDto" Field="@nameof(ProductDto.Cost)" Caption="Cost" Sortable="true" Editable="true" Filterable="false"></DataGridNumericColumn >
@@ -63,18 +63,18 @@
       {
         if (colInfo.SearchValue is not null)
         {
-          queryRequest.Filters.Add(new FilterDto(colInfo.Field, "Contains", colInfo.SearchValue));
+          queryRequest.Filters.Add(new FilterDto(colInfo.Field, "Contains", colInfo.SearchValue.ToString()));
         }
 
-        switch (colInfo.Direction)
+        switch (colInfo.SortDirection)
         {
           case SortDirection.Descending:
-            queryRequest.Sorts.Add(colInfo.Field + (colInfo.Direction == SortDirection.Descending ? "Desc" : ""));
+            queryRequest.Sorts.Add(colInfo.Field + (colInfo.SortDirection == SortDirection.Descending ? "Desc" : ""));
             break;
           case SortDirection.Ascending:
             queryRequest.Sorts.Add(colInfo.Field);
             break;
-          case SortDirection.None:
+          case SortDirection.Default:
             break;
           default:
             throw new ArgumentOutOfRangeException();

@@ -30,9 +30,9 @@ namespace Blazor.Client
 
             builder.Services.AddBlazorise(options =>
                 {
-                    options.ChangeTextOnKeyPress = false;
-                    options.DelayTextOnKeyPress = true;
-                    options.DelayTextOnKeyPressInterval = 1000;
+                    //options.ChangeTextOnKeyPress = false;
+                    //options.DelayTextOnKeyPress = true;
+                    //options.DelayTextOnKeyPressInterval = 1000;
                 })
                 .AddBootstrapProviders()
                 .AddFontAwesomeIcons();
